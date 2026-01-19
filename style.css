@@ -1,0 +1,189 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg , #bdc0f5, #878ac6,#7c80e9);
+    min-height: 100dvh;
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    overflow: hidden;
+}
+#start-screen, #game-screen ,#end-screen {
+    background: rgba(255,255,255,0.1);
+    padding: 16px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    width: 92%;
+    max-width: 320px;
+}
+#game-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 100dvh;
+}
+h2{
+    margin-bottom: 15px;
+}
+input, select{
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1em;
+}
+button{
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: #e68900;
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 8px;
+    justify-content:center ;
+    margin: 12px auto;
+    width: 100%;
+    max-width: 260px;
+}
+.cell{
+    width: 90px;
+    height: 90px;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2em;
+    font-weight:bold ;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background 0.2s ease;
+    aspect-ratio: 1 / 1;
+}
+.cell:hover{
+    transform: scale(1.05);
+    background: rgba(255,255,255,0.3);
+}
+.cell.X{
+    color: #ff4e50;
+    text-shadow: 0 0 8px #ff4e50;
+}
+.cell.O{
+    color: #1DD1A1;
+    text-shadow: 0 0 8px #1dd1a1 ;
+}
+#turn-info,
+#score{
+    font-size: 0.9em;
+    margin: 6px 0;
+}
+/* --------------------- */
+@media(min-width:768px){
+    #start-screen , #game-screen, #end-screen{
+        max-width: 380px;
+    }
+    .cell{
+        font-size: 3em;
+    }
+}
+@media(max-width:650px){
+    h2{
+        font-size: 1.1em;
+    }
+    .cell{
+        font-size: 1.8em;
+    }
+    #start-screen , #game-screen{
+        padding: 12px;
+    }
+}
+@media(max-width:480px){
+    h2{
+        font-size: 1.2em;
+    }
+    input, select, button{
+        font-size: 0.9em;
+        padding: 8px;
+    }
+    .cell{
+        font-size: 2em;
+    }
+}
+@media(max-width:360px){
+    .board{
+        max-width: 220px;
+        gap: 6px;
+    }
+    .cell{
+        font-size: 1.6em;
+        max-width: 60px;
+        max-height: 60px;
+    }
+    .turn-info, .score{
+               font-size: 0.8em;
+    }
+   }
+@media(max-width:200px){
+    .cell{
+        max-width: 50px;
+        max-height: 50px;
+    }
+}
+@media(max-width:184px){
+    .cell{
+        max-width: 40px;
+        max-height: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

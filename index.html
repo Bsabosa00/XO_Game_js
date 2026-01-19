@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game X O Responsive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-screen">
+        <h2>Enter Player Details</h2>
+        <input type="text" id="player1Name" placeholder="Player 1 Name">
+        <input type="text" id="player2Name" placeholder="Player 2 Name">
+
+        <label>Choose Player 1 Symbol:</label>
+        <select id="player1symbol">
+           <option value="X">X</option>
+           <option value="O">O</option>
+        </select>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <div id="game-screen"  style="display: none;">
+        <h2 id="round-info">Round 1 of 3</h2>
+        <div id="board" class="board"></div>
+        <p id="turn-info"></p>
+        <p id="score"></p>
+    </div>
+    <div id="end-screen" style="display: none;">
+        <h2 id="winner"></h2>
+        <button onclick="location.reload()">Play Again</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
